@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    width: 100%;
+    height: 100vh;                   
+    background-image: url("../assets/EC1A17AC-DEEC-453C-BFE8-02C3C8E2C27B.PNG");
+    background-size: cover;          
+    background-position: center;    
+    background-repeat: no-repeat;     
+    display: flex;
+    justify-content: center;         
+    align-items: center;
+    color: white;  
+    overflow: hidden;  
+    backdrop-filter: blur(4px);            
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 4.5rem;
+    width: 100%;
+    padding: 1.8rem;
+    display: flex;
+    justify-content: flex-start;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;     
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.nav-list a:hover {
+    color: #00e1ff;
+    cursor: pointer;
+    transition: 1.2s;
+    border-bottom: 1px solid #00e1ff;
+}
+/* ------- ESTILO FORMULARIO ------- */
+
+form {
+    width: 100%;
+    height: auto;
+    background-color: rgba(41, 39, 39, 0.825);
+    padding: 2rem;
+    border-radius: 18px;
+}
+form h1 {
+    text-align: center;
+    margin: 4rem 0;
+    color: rgb(165, 163, 163);
+    font-size: 2.5rem;
+    text-shadow: 0 2px 12px #ffffff51
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    margin: 1.4rem;
+}
+form label .sel-input {
+    outline: none;
+    border: none;
+    padding: 1rem;
+    font-size: 14px;
+    box-shadow: 0 0.2px 5px #6e6e6ec2;
+}
+
+form label .sel-input:hover {
+    box-shadow: 0 2px 12px #6e6e6ec2;
+}
+.sel-input, textarea {
+    width: 450px;
+    padding: 1.1rem;
+    border-radius: 7px;
+    background-color: transparent;
+    color: rgb(177, 176, 176);
+}
+label textarea {
+    font-family: sans-serif;
+    color: rgb(177, 176, 176);
+    border: 0.5px solid rgba(128, 128, 128, 0.278);
+    min-width: auto;
+    max-width: 45rem;
+}
+label span {
+    font-size: 1.8rem;
+    color: rgb(201, 200, 200);
+    padding: 1rem 0;
+}
+fieldset {
+    border-radius: 8px;
+    border: 1px solid rgba(128, 128, 128, 0.337)
+}
+legend {
+    padding: 0 1rem;
+    text-align: center;
+}
+
+
+
+/* --------------------- RESPONSIVE ------------------------ */
+
+@media (max-width: 768px) {
+
+    body {
+    width: 100%;
+    height: 100vh;                   
+    background-image: url("../assets/EC1A17AC-DEEC-453C-BFE8-02C3C8E2C27B.PNG");
+    background-size: cover;          
+    background-position: center;    
+    background-repeat: no-repeat;     
+    backdrop-filter: blur(4px);            
+}
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        left: 300px;
+        z-index: 1;
+    }
+
+    .hamburger span {
+        width: 28px;
+        height: 2.4px;
+        background: #fff;
+        border-radius: 3px;
+        transition: 0.3s ease;
+    }
+    .nav-list {
+        position: absolute;
+        top: -15px;
+        left: 150px;
+        background: rgba(0, 0, 0, 0.85);
+        width: 90%;
+        flex-direction: column;
+        padding: 10px;
+        display: none;
+        border-radius: 10px;
+        backdrop-filter: blur(6px);
+    }
+
+    .nav-list li a {
+        color: white;
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+    .nav-list.active {
+        display: flex;
+        position: relative;
+        gap: 2rem;
+        background-color: #0000005e;
+        top: -10px;
+        left: -44px;
+        background: #000;
+        width: 100%;
+        flex-direction: column;
+        padding: 10px;
+        border-radius: 10px;
+        backdrop-filter: blur(6px);
+        justify-content: center;
+        align-items: center;
+    }
+    .hamburger.open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    form {
+        width: 100%;
+        height: auto;
+        background-color: rgba(41, 39, 39, 0.825);
+        padding: 1rem;
+        border-radius: 18px;
+        margin: auto;
+    }
+    form h1 {
+    text-align: center;
+    margin: 1.2rem 0;
+    color: rgb(165, 163, 163);
+    font-size: 2.1rem;
+    text-shadow: 0 2px 12px #ffffff51;
+}
+form label {
+    display: flex;
+    flex-direction: column;
+    margin: 1.4rem;
+    width: 68%;
+}
+label span {
+    font-size: 1.6rem;
+    color: rgb(201, 200, 200);
+    padding: 1rem 0;
+}
+form label .sel-input {
+    outline: none;
+    border: none;
+    padding: 1rem;
+    font-size: 13px;
+    box-shadow: 0 0.2px 5px #6e6e6ec2;
+    width: 315px;
+}
+}
